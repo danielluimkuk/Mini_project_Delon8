@@ -1,9 +1,10 @@
 import os
 import csv
 import copy
-import time
 import re
 
+# three different static functions to get csv to temporary list in the three objects
+# could be better if they can be stored in one class and create their own list according to default menu items
 
 def get_product_list_from_csv():
     temp_list = []
@@ -69,24 +70,28 @@ def get_order_list_from_csv():
                 temp_list.append(item)
         return temp_list
 
+# the below two classes were designed to be used, but eventually I gave up as I
+# could not interate through it or return it back like they are dict object.
+# so they are gone like the money in the southpark bank
+# https://www.youtube.com/watch?v=Y3AM00DH0Zo two mins cartoon for some fun
 
-class Product(dict):
-    def __init__(self, name: str, price: float):
-        super().__init__()
-        self.name = name
-        self.price = price
-        self.dict = {name: price}
-
-    # def __repr__(self):
-    #     return self.dict
-
-
-class Courier(dict):
-    def __init__(self, name: str, cou_phone: str):
-        super().__init__()
-        self.name = name
-        self.phone = cou_phone
-        self.dict = {'courier name': name, 'phone': cou_phone}
+# class Product(dict):
+#     def __init__(self, name: str, price: float):
+#         super().__init__()
+#         self.name = name
+#         self.price = price
+#         self.dict = {name: price}
+#
+#     # def __repr__(self):
+#     #     return self.dict
+#
+#
+# class Courier(dict):
+#     def __init__(self, name: str, cou_phone: str):
+#         super().__init__()
+#         self.name = name
+#         self.phone = cou_phone
+#         self.dict = {'courier name': name, 'phone': cou_phone}
 
 
 class ProductMenu:
@@ -456,6 +461,8 @@ class OrderMenu:
             print('\nInvalid input.\n')
             self.delete_order()
 
+# the below functions are used to fulfil the requirement of the mini project for specific inputs
+# regular expression is used here, so only numbers and , are accepted
     def choose_courier(self):
         temp_list = get_courier_list_from_csv()
         for count, value in enumerate(temp_list):
