@@ -8,9 +8,8 @@ They are offering home-made lunches and refreshments to the surrounding offices.
 
 As such, they require a software application which helps them to log and track orders.
 
-Requirements
 
-As a business:
+Requirements as a business:
 
 • I want to maintain a collection of products and couriers.
 
