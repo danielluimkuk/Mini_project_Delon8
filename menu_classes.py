@@ -95,7 +95,6 @@ class ProductMenu:
 
     def show_product_menu(self):
 
-        os.system('clear')
         self.product_list = get_product_list_from_csv()
 
         command = input(f"Please enter your command.\n"
@@ -124,6 +123,7 @@ class ProductMenu:
             writer.writerows(self.product_list)
 
     def print_product_list(self):
+        
         temp_list = get_product_list_from_csv()
         for item in temp_list:
             print(item)
@@ -190,7 +190,7 @@ class CourierMenu:
 
     def show_courier_menu(self):
 
-        os.system('clear')
+        
 
         self.courier_list = get_courier_list_from_csv()
 
@@ -288,7 +288,7 @@ class OrderMenu:
 
     def show_order_menu(self):
 
-        os.system('clear')
+        
 
         self.order_list = get_order_list_from_csv()
 

@@ -9,7 +9,7 @@ app_end = False
 
 
 while app_end is not True:
-    os.system('clear')
+    
     command = input(f"Welcome to Daniel's cafe, please state your command!"
                     f"\n0. Exit"
                     f"\n1. Product Menu"
