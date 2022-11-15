@@ -295,16 +295,19 @@ class OrderMenu:
         command = input(f"Please enter your command.\n"
                         f"0. Go back to main menu.\n"
                         f"1. Print order list.\n"
-                        f"2. Create new order\n"
-                        f"3. Update order\n"
-                        f"4. Delete order\n")
+                        f"2. Create new order.\n"
+                        f"3. Update order status.\n"
+                        f"4. Update order detals.\n"
+                        f"5. Delete order.\n")
         if command == '1':
             self.print_order_list()
         elif command == '2':
             self.create_order()
         elif command == '3':
-            self.update_order()
+            self.update_status()
         elif command == '4':
+            self.update_order()
+        elif command == '5':
             self.delete_order()
         elif command == '0':
             pass
@@ -376,6 +379,66 @@ class OrderMenu:
             print('\nInvalid input.\n')
             self.update_order()
 
+    def update_status(self):
+        temp_list = self.order_list
+        for count, value in enumerate(self.order_list):
+            print(count + 1, value)
+        try:
+            thing_to_update = int(input(f'Please pick an order to update: '))
+
+            old_thing = copy.deepcopy(temp_list[thing_to_update - 1])
+            new_thing = temp_list[thing_to_update - 1]
+            choice = input (f"Please choose a status:\n"
+                            f"1. Preparing\n"
+                            f"2. Dispatched\n"
+                            f"3. Delivered\n"
+                            f"4. Cancelled\n")
+            if choice == '1':
+                choice = 'Preparing'
+            elif choice == '2':
+                choice = 'Dispatched'
+            elif choice == '3':
+                choice = 'Delivered'
+            elif choice == '4':
+                choice = 'Cancelled'
+
+            new_thing['status'] = choice
+
+            temp_list[thing_to_update - 1] = new_thing
+
+            print(f"\n'{old_thing}' is updated to '{new_thing}'\n")
+            self.order_list = temp_list
+            self.save_list_to_csv()
+
+        except (ValueError, IndexError):
+            print('\nInvalid input.\n')
+            self.update_status()
+
+    def update_order(self):
+        temp_list = self.order_list
+        for count, value in enumerate(self.order_list):
+            print(count + 1, value)
+        try:
+            thing_to_update = int(input(f'Please pick an order to update: '))
+
+            old_thing = copy.deepcopy(temp_list[thing_to_update - 1])
+            new_thing = temp_list[thing_to_update - 1]
+            for key in new_thing:
+                new_key = input(f'What is the new {key}? ')
+                if new_key == '':
+                    pass
+                else:
+                    new_thing[key] = new_key
+
+            temp_list[thing_to_update - 1] = new_thing
+
+            print(f"\n'{old_thing}' is updated to '{new_thing}'\n")
+            self.order_list = temp_list
+            self.save_list_to_csv()
+
+        except (ValueError, IndexError):
+            print('\nInvalid input.\n')
+            self.update_order()
     def delete_order(self):
         temp_list = self.order_list
         for count, value in enumerate(self.order_list):
