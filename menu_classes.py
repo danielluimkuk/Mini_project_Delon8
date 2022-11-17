@@ -142,7 +142,7 @@ class ProductMenu:
             self.product_list.append(new_item)
             print("The product is created!!")
             self.save_list_to_csv()
-        except (ValueError, IndexError):
+        except TypeError:
             print('Invalid input.')
             self.create_product()
 
