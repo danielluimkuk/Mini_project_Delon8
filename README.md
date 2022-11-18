@@ -1,7 +1,8 @@
-# Mini-Project for Data Engineer program of Generation UK
-# Building a program that runs on the command line (CLI).
+# Mini-Project for Data Engineer program of Generation UK  
 
-## Overview
+# Building a program that runs on the command line (CLI).  
+
+## Project Background
 
 Your client has launched a pop-up café in a busy business district. 
 
@@ -50,3 +51,23 @@ As such, they require a software application which helps them to log and track o
 ![Screenshot 2022-11-18 at 12 18 03 PM](https://user-images.githubusercontent.com/108125998/202704553-d16847a0-7517-4b5a-860c-eb60802992b5.png)  
 #### A look on the CSV file.
 ![Screenshot 2022-11-18 at 1 33 05 PM](https://user-images.githubusercontent.com/108125998/202716799-c34c2e41-e9c6-4dcf-8f28-86a3f8d8f6da.png)
+
+## Meeting the requirements -- Testing
+Apart from doing manuel testing to ensure the app meeting the requirements.  
+Some unit testings are also done.
+
+## Potential improvements  
+#### Better UI
+Commands like "os.system('clear')" can be used to refresh the terminal whenever a menu is called or a page is turned, it is removed to make the program lighter and more reader-friendly.  
+#### Better use of classes and OOP
+Individual products, couriers and orders can be sorted to their own class with their own specific attributes to form their own dictionaries.
+A repository layer should be used to better handle the filing of CSVs and data base interaction.  
+The code can be further refractor to meet the clean code standard.
+#### Too wet
+###### DRY (Don't Repeat Youself)  
+It is best practice however the code is a bit repetitive to be honest.  
+#### Testability
+Although the app logic is quite straight forward, the functions are not neat enough to be tested individually without some modifications, for example creating fake classes and fake functions.
+
+## Things I enjoyed most.
+It is a wonderful experience to practice my OOP concepts, logic, file handling and exception handling. Pretty much 
