@@ -70,4 +70,5 @@ It is best practice however the code is a bit repetitive to be honest.
 Although the app logic is quite straight forward, the functions are not neat enough to be tested individually without some modifications, for example creating fake classes and fake functions.
 
 ## Things I enjoyed most.
-It is a wonderful experience to practice my OOP concepts, logic, file handling and exception handling. Pretty much 
+It is a wonderful experience to practice my OOP concepts, logic, file handling and exception handling.  
+
