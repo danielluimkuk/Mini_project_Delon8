@@ -151,10 +151,10 @@ class ProductMenu:
         for count, value in enumerate(self.product_list):
             print(count + 1, value)
         try:
-            thing_to_update = int(input(f'Please pick a product to update: '))
+            index_of_thing_to_update = int(input(f'Please pick a product to update: '))
 
-            old_thing = copy.deepcopy(temp_list[thing_to_update - 1])
-            new_thing = temp_list[thing_to_update - 1]
+            old_thing = copy.deepcopy(temp_list[index_of_thing_to_update - 1])
+            new_thing = temp_list[index_of_thing_to_update - 1]
             for key in new_thing:
                 new_key = input(f'What is the new {key}? ')
                 if new_key == '':
@@ -162,7 +162,7 @@ class ProductMenu:
                 else:
                     new_thing[key] = new_key
 
-            temp_list[thing_to_update - 1] = new_thing
+            temp_list[index_of_thing_to_update - 1] = new_thing
 
             print(f"\n'{old_thing}' is updated to '{new_thing}'\n")
             self.product_list = temp_list
@@ -239,7 +239,7 @@ class CourierMenu:
             print("The courier is created!!")
             print(self.courier_list)
             self.save_list_to_csv()
-        except (ValueError, IndexError) as e:
+        except (TypeError) as e:
             print('Invalid input.')
             print(e)
             self.create_courier()
@@ -249,10 +249,10 @@ class CourierMenu:
         for count, value in enumerate(self.courier_list):
             print(count + 1, value)
         try:
-            thing_to_update = int(input(f'Please pick a product to update: '))
+            index_of_thing_to_update = int(input(f'Please pick a product to update: '))
 
-            old_thing = copy.deepcopy(temp_list[thing_to_update - 1])
-            new_thing = temp_list[thing_to_update - 1]
+            old_thing = copy.deepcopy(temp_list[index_of_thing_to_update - 1])
+            new_thing = temp_list[index_of_thing_to_update - 1]
             for key in new_thing:
                 new_key = input(f'What is the new {key}? ')
                 if new_key == '':
@@ -260,7 +260,7 @@ class CourierMenu:
                 else:
                     new_thing[key] = new_key
 
-            temp_list[thing_to_update - 1] = new_thing
+            temp_list[index_of_thing_to_update - 1] = new_thing
 
             print(f"\n'{old_thing}' is updated to '{new_thing}'\n")
             self.courier_list = temp_list
@@ -354,7 +354,7 @@ class OrderMenu:
             self.order_list.append(new_item)
             print('The order is created!!')
             self.save_list_to_csv()
-        except (ValueError, IndexError):
+        except TypeError:
             print('Invalid input.')
             self.create_order()
 
@@ -363,10 +363,10 @@ class OrderMenu:
         for count, value in enumerate(self.order_list):
             print(count + 1, value)
         try:
-            thing_to_update = int(input(f'Please pick an order to update: '))
+            index_of_thing_to_update = int(input(f'Please pick an order to update: '))
 
-            old_thing = copy.deepcopy(temp_list[thing_to_update - 1])
-            new_thing = temp_list[thing_to_update - 1]
+            old_thing = copy.deepcopy(temp_list[index_of_thing_to_update - 1])
+            new_thing = temp_list[index_of_thing_to_update - 1]
             for key in new_thing:
                 new_key = input(f'What is the new {key}? ')
                 if new_key == '':
@@ -374,7 +374,7 @@ class OrderMenu:
                 else:
                     new_thing[key] = new_key
 
-            temp_list[thing_to_update - 1] = new_thing
+            temp_list[index_of_thing_to_update - 1] = new_thing
 
             print(f"\n'{old_thing}' is updated to '{new_thing}'\n")
             self.order_list = temp_list
@@ -389,10 +389,10 @@ class OrderMenu:
         for count, value in enumerate(self.order_list):
             print(count + 1, value)
         try:
-            thing_to_update = int(input(f'Please pick an order to update: '))
+            index_of_thing_to_update = int(input(f'Please pick an order to update: '))
 
-            old_thing = copy.deepcopy(temp_list[thing_to_update - 1])
-            new_thing = temp_list[thing_to_update - 1]
+            old_thing = copy.deepcopy(temp_list[index_of_thing_to_update - 1])
+            new_thing = temp_list[index_of_thing_to_update - 1]
             choice = input (f"Please choose a status:\n"
                             f"1. Preparing\n"
                             f"2. Dispatched\n"
@@ -409,7 +409,7 @@ class OrderMenu:
 
             new_thing['status'] = choice
 
-            temp_list[thing_to_update - 1] = new_thing
+            temp_list[index_of_thing_to_update - 1] = new_thing
 
             print(f"\n'{old_thing}' is updated to '{new_thing}'\n")
             self.order_list = temp_list
@@ -424,10 +424,10 @@ class OrderMenu:
         for count, value in enumerate(self.order_list):
             print(count + 1, value)
         try:
-            thing_to_update = int(input(f'Please pick an order to update: '))
+            index_of_thing_to_update = int(input(f'Please pick an order to update: '))
 
-            old_thing = copy.deepcopy(temp_list[thing_to_update - 1])
-            new_thing = temp_list[thing_to_update - 1]
+            old_thing = copy.deepcopy(temp_list[index_of_thing_to_update - 1])
+            new_thing = temp_list[index_of_thing_to_update - 1]
             for key in new_thing:
                 new_key = input(f'What is the new {key}? ')
                 if new_key == '':
@@ -435,7 +435,7 @@ class OrderMenu:
                 else:
                     new_thing[key] = new_key
 
-            temp_list[thing_to_update - 1] = new_thing
+            temp_list[index_of_thing_to_update - 1] = new_thing
 
             print(f"\n'{old_thing}' is updated to '{new_thing}'\n")
             self.order_list = temp_list
