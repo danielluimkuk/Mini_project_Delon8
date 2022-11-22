@@ -3,6 +3,7 @@ import csv
 import copy
 import re
 
+
 # three different static functions to get csv to temporary list in the three objects
 # could be better if they can be stored in one class and create their own list according to default menu items
 
@@ -70,9 +71,10 @@ def get_order_list_from_csv():
                 temp_list.append(item)
         return temp_list
 
+
 # the below two classes were designed to be used, but eventually I gave up as I
-# could not interate through it or return it back like they are dict object.
-# so they are gone like the money in the southpark bank
+# could not iterate through it or return it back like they are dict object.
+# so they are gone like the money in the south-park bank
 # https://www.youtube.com/watch?v=Y3AM00DH0Zo two mins cartoon for some fun
 
 # class Product(dict):
@@ -128,7 +130,7 @@ class ProductMenu:
             writer.writerows(self.product_list)
 
     def print_product_list(self):
-        
+
         temp_list = get_product_list_from_csv()
         for item in temp_list:
             print(item)
@@ -194,8 +196,6 @@ class CourierMenu:
         self.courier_list = get_courier_list_from_csv()
 
     def show_courier_menu(self):
-
-        
 
         self.courier_list = get_courier_list_from_csv()
 
@@ -293,8 +293,6 @@ class OrderMenu:
 
     def show_order_menu(self):
 
-        
-
         self.order_list = get_order_list_from_csv()
 
         command = input(f"Please enter your command.\n"
@@ -302,7 +300,7 @@ class OrderMenu:
                         f"1. Print order list.\n"
                         f"2. Create new order.\n"
                         f"3. Update order status.\n"
-                        f"4. Update order detals.\n"
+                        f"4. Update order details.\n"
                         f"5. Delete order.\n")
         if command == '1':
             self.print_order_list()
@@ -316,9 +314,6 @@ class OrderMenu:
             self.delete_order()
         elif command == '0':
             pass
-
-    # def generate_order_id(self):
-    #     return time.strftime("%y%m%d%H%M%S", time.gmtime())
 
     def save_list_to_csv(self):
         header = ['customer_name',
@@ -393,11 +388,11 @@ class OrderMenu:
 
             old_thing = copy.deepcopy(temp_list[index_of_thing_to_update - 1])
             new_thing = temp_list[index_of_thing_to_update - 1]
-            choice = input (f"Please choose a status:\n"
-                            f"1. Preparing\n"
-                            f"2. Dispatched\n"
-                            f"3. Delivered\n"
-                            f"4. Cancelled\n")
+            choice = input(f"Please choose a status:\n"
+                           f"1. Preparing\n"
+                           f"2. Dispatched\n"
+                           f"3. Delivered\n"
+                           f"4. Cancelled\n")
             if choice == '1':
                 choice = 'Preparing'
             elif choice == '2':
@@ -444,6 +439,7 @@ class OrderMenu:
         except (ValueError, IndexError):
             print('\nInvalid input.\n')
             self.update_order()
+
     def delete_order(self):
         temp_list = self.order_list
         for count, value in enumerate(self.order_list):
@@ -461,8 +457,8 @@ class OrderMenu:
             print('\nInvalid input.\n')
             self.delete_order()
 
-# the below functions are used to fulfil the requirement of the mini project for specific inputs
-# regular expression is used here, so only numbers and , are accepted
+    # the below functions are used to fulfil the requirement of the mini project for specific inputs
+    # regular expression is used here, so only numbers and , are accepted
     def choose_courier(self):
         temp_list = get_courier_list_from_csv()
         for count, value in enumerate(temp_list):
@@ -486,5 +482,3 @@ class OrderMenu:
             else:
                 continue
         return choice
-
-
