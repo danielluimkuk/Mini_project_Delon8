@@ -22,7 +22,59 @@ As such, they require a software application which helps them to log and track o
 
 • I need to be sure my app has been tested and proven to work well.
 
-• I need to receive regular software updates.
+• I need to receive regular software updates.  
+
+
+# Requirements
+
+## Week 1
+
+-   create a product (string) and add it to a list
+-   view all products with an index attached
+-   STRETCH update or delete a product using an index value to choose
+
+Finished the requirement and stretch goal however I did not have TDD in mind at all.
+Finished it without any OOP and the functions were bit lengthy
+
+## Week 2
+
+-   create a product,  **courier or order**  and add it to a list
+-   view all products,  **couriers or orders**  index attached
+-   **add data persitence**  using text files
+-   STRETCH update or delete a product,  **courier or order**  by choosing its index
+
+Orders were required to be stored as dictionaries with the following structure { "customer_name": "John", "customer_address": "Unit 2, 12 Main Street, LONDON, WH1 2ER", "customer_phone": "0789887334", "status": "preparing" }
+
+There was some confusion this week because we got two different sets of requirements.
+
+Rewrote the whole app and implemented some OOP to reuse the code, as the functions required for products and couriers are identical but their name and file path.
+Added the functions to add, update and delete couriers and orders and added code to read and write from/to txt files.
+
+The dictionary type for order made the code not reusable thus some repetitive functions were made. However functionality wise , it is functional and met the requirements.
+
+
+
+## Week 3
+
+-   create a product, courier or order and add it to a list
+-   view all products, couriers or orders
+-   add data persistence using text files  **- update the status of an order**
+-   STRETCH update or delete a product, courier or order by index
+
+As we were required to persist data with txt file, I imagined we would be required to persist it on csv file later on. So I took the initiative to do it earlier and made all three of the items persist-able in csv files.
+Requirements are met and exceeded. (might not be a good practice)
+
+## Week 4
+
+-   create a product, courier or order and add it to a list
+-   view all products, couriers or orders
+-   add data persistence using  **csv files**
+-   update the status of an order
+-   **BONUS list orders by status or courier**
+
+Rewrote the program again to try adopting the repository pattern and making classes like objects of order, product, courier. However when I tried to loop through these objects, some bugs were found and I retreat back to using dictionaries instead.
+
+
 
 ## Project Outline
 
