@@ -12,7 +12,7 @@ class FakeProductMenu:
         self.save_list_to_csv_has_been_called = True
         header = ['name', 'price']
 
-        with open('fake_order_for_test.csv', 'w') as file:
+        with open('venv/test and dependencies/fake_order_for_test.csv', 'w') as file:
             writer = csv.DictWriter(file, header)
             writer.writeheader()
             writer.writerows(self.product_list)

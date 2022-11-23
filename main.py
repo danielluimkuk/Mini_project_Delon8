@@ -31,8 +31,6 @@ while app_end is not True:
 
     elif command == '0':
 
-        os.system('clear')
-
         product_menu.save_list_to_csv()
         courier_menu.save_list_to_csv()
         order_menu.save_list_to_csv()

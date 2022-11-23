@@ -1,6 +1,5 @@
 from unittest import mock
-from unittest.mock import patch
-from fake_classes import FakeProductMenu, FakeCourierMenu, FakeOrderMenu
+from tests.fake_classes import FakeProductMenu, FakeCourierMenu, FakeOrderMenu
 import csv
 import pytest
 

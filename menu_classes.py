@@ -9,20 +9,20 @@ import re
 
 def get_product_list_from_csv():
     temp_list = []
-    if os.path.exists('product.csv'):
-        with open('product.csv', 'r') as file:
+    if os.path.exists('data/product.csv'):
+        with open('data/product.csv', 'r') as file:
             reader = csv.DictReader(file)
             for item in reader:
                 temp_list.append(item)
         return temp_list
     else:
-        with open('product.csv', 'w') as file:
+        with open('data/product.csv', 'w') as file:
             writer = csv.writer(file)
             writer.writerow(['name', 'price'])
             writer.writerow(['latte', '4.0'])
             writer.writerow(['espresso', '3.0'])
             writer.writerow(['cappuccino', '5.0'])
-        with open('product.csv', 'r') as file:
+        with open('data/product.csv', 'r') as file:
             reader = csv.DictReader(file)
             for item in reader:
                 temp_list.append(item)
@@ -31,20 +31,20 @@ def get_product_list_from_csv():
 
 def get_courier_list_from_csv():
     temp_list = []
-    if os.path.exists('courier.csv'):
-        with open('courier.csv', 'r') as file:
+    if os.path.exists('data/courier.csv'):
+        with open('data/courier.csv', 'r') as file:
             reader = csv.DictReader(file)
             for item in reader:
                 temp_list.append(item)
         return temp_list
     else:
-        with open('courier.csv', 'w') as file:
+        with open('data/courier.csv', 'w') as file:
             writer = csv.writer(file)
             writer.writerow(['name', 'phone'])
             writer.writerow(['JustEat', '189047221984'])
             writer.writerow(['UberEat', '235791935235'])
             writer.writerow(['Deliveroo', '423781235352'])
-        with open('courier.csv', 'r') as file:
+        with open('data/courier.csv', 'r') as file:
             reader = csv.DictReader(file)
             for item in reader:
                 temp_list.append(item)
@@ -53,19 +53,19 @@ def get_courier_list_from_csv():
 
 def get_order_list_from_csv():
     temp_list = []
-    if os.path.exists('order.csv'):
-        with open('order.csv', 'r') as file:
+    if os.path.exists('data/order.csv'):
+        with open('data/order.csv', 'r') as file:
             reader = csv.DictReader(file)
             for item in reader:
                 temp_list.append(item)
         return temp_list
     else:
-        with open('order.csv', 'w') as file:
+        with open('data/order.csv', 'w') as file:
             writer = csv.writer(file)
             writer.writerow(['customer_name',
                              'customer_address', 'customer_phone',
                              'courier', 'status', 'items'])
-        with open('order.csv', 'r') as file:
+        with open('data/order.csv', 'r') as file:
             reader = csv.DictReader(file)
             for item in reader:
                 temp_list.append(item)
@@ -124,7 +124,7 @@ class ProductMenu:
     def save_list_to_csv(self):
         header = ['name', 'price']
 
-        with open('product.csv', 'w') as file:
+        with open('data/product.csv', 'w') as file:
             writer = csv.DictWriter(file, header)
             writer.writeheader()
             writer.writerows(self.product_list)
@@ -219,7 +219,7 @@ class CourierMenu:
     def save_list_to_csv(self):
         header = ['name', 'phone']
 
-        with open('courier.csv', 'w') as file:
+        with open('data/courier.csv', 'w') as file:
             writer = csv.DictWriter(file, header)
             writer.writeheader()
             writer.writerows(self.courier_list)
@@ -320,7 +320,7 @@ class OrderMenu:
                   'customer_address', 'customer_phone',
                   'courier', 'status', 'items']
 
-        with open('order.csv', 'w') as file:
+        with open('data/order.csv', 'w') as file:
             writer = csv.DictWriter(file, header)
             writer.writeheader()
             writer.writerows(self.order_list)
@@ -463,13 +463,21 @@ class OrderMenu:
         temp_list = get_courier_list_from_csv()
         for count, value in enumerate(temp_list):
             print(count + 1, value)
-        choice = input("Please choose a courier from above list: ")
-        if re.match("^[0-9,]*$", choice):
-            return choice
-        else:
-            print('Invalid input.')
-            self.choose_courier()
-
+        # choice = input("Please choose a courier from above list: ")
+        # if re.match("^[0-9,]*$", choice):
+        #     return choice
+        # else:
+        #     print('Invalid input.')
+        #     self.choose_courier()
+        loop_end = False
+        while loop_end is not True:
+            choice = input('Please choose a courier from above list: ')
+            if re.match("^[0-9,]*$", choice):
+                loop_end = True
+            else:
+                print('Invalid input.')
+                continue
+        return choice
     def choose_product(self):
         temp_list = get_product_list_from_csv()
         for count, value in enumerate(temp_list):
@@ -480,5 +488,6 @@ class OrderMenu:
             if re.match("^[0-9,]*$", choice):
                 loop_end = True
             else:
+                print('Invalid input.')
                 continue
         return choice
