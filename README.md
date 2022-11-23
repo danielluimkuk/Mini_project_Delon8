@@ -54,7 +54,15 @@ As such, they require a software application which helps them to log and track o
 
 ## Meeting the requirements -- Testing
 Apart from doing manuel testing to ensure the app meeting the requirements.  
-Some unit testings are also done.
+Some unit testings are also done.   
+11 Tests were made at this point of time.  
+One is used to test the save list to csv function.
+Two are used to test if the create product function will raise type error for unknown inputs and successfully append the item to the list.  
+Another one is used to test the delete function and two other were used to test if the app can navigate through different menus from number command.  
+Two similar tests for the courier menu.
+One last test for update status function of the order menu as it is a lengthy dictionary.  
+
+Tests were made with the assistance of fake classes as some of them do not return any objects to be tested.
 
 ## Potential improvements  
 #### Better UI
@@ -62,7 +70,9 @@ Commands like "os.system('clear')" can be used to refresh the terminal whenever 
 #### Better use of classes and OOP
 Individual products, couriers and orders can be sorted to their own class with their own specific attributes to form their own dictionaries.
 A repository layer should be used to better handle the filing of CSVs and data base interaction.  
+Variables such as PATH and HEADER can be used to reduce repetitive code for file handling.  
 The code can be further refractor to meet the clean code standard.
+
 #### Too wet
 ###### DRY (Don't Repeat Youself)  
 It is best practice however the code is a bit repetitive to be honest.  
@@ -71,4 +81,8 @@ Although the app logic is quite straight forward, the functions are not neat eno
 
 ## Things I enjoyed most.
 It is a wonderful experience to practice my OOP concepts, logic, file handling and exception handling.  
+If I have to pick one thing I learnt from this project, is the importance of TDD.
+When I was writing the tests for the app, it was so hard to make tests for made applications and functions.
+It was a painful lesson but definitely worth while.  
+
 
