@@ -10,9 +10,6 @@ They are offering home-made lunches and refreshments to the surrounding offices.
 
 As such, they require a software application which helps them to log and track orders.  
 
-![Screenshot 2022-11-23 at 12 27 35 AM](https://user-images.githubusercontent.com/108125998/203447563-9d16c417-b2d8-48f4-ba43-3b34f15b0b05.png)
-
-
 ## Requirements as a business:
 
 • I want to maintain a collection of products and couriers.
@@ -30,6 +27,9 @@ As such, they require a software application which helps them to log and track o
 • I need to receive regular software updates.
 
 ## Project Outline
+
+![Screenshot 2022-11-23 at 10 46 49 AM](https://user-images.githubusercontent.com/108125998/203528003-df5f13d1-353d-4f17-a19b-758b73d86fff.png)
+
 • The functions of the project are encapsulated in three classes. ProductMenu, CourierMenu and OrderMenu.  
 
 • Each of the objects have their own CRUD functions and CSV file for data persistance.  
