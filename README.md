@@ -139,7 +139,7 @@ If I have to pick one thing I learnt from this project, is the importance of TDD
 When I was writing the tests for the app, it was so hard to make tests for made applications and functions.
 It was a painful lesson but definitely worth while.  
 
-##KEY TAKEAWAY
+## KEY TAKEAWAY
 1. Documentation
 2. Testability
 3. Sticking to requirement
