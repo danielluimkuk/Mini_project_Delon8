@@ -34,7 +34,7 @@ As such, they require a software application which helps them to log and track o
 -   STRETCH update or delete a product using an index value to choose
 
 Finished the requirement and stretch goal however I did not have TDD in mind at all.
-Finished it without any OOP and the functions were bit lengthy
+Finished it without any OOP and the functions were bit lengthy.
 
 ## Week 2
 
@@ -138,5 +138,10 @@ It is a wonderful experience to practice my OOP concepts, logic, file handling a
 If I have to pick one thing I learnt from this project, is the importance of TDD.
 When I was writing the tests for the app, it was so hard to make tests for made applications and functions.
 It was a painful lesson but definitely worth while.  
+
+##KEY TAKEAWAY
+1. Documentation
+2. Testability
+3. Sticking to requirement
 
 
