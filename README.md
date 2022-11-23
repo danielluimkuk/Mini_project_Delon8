@@ -1,7 +1,6 @@
 # Mini-Project for Data Engineer program of Generation UK  --- Building a program that runs on the command line (CLI).   
 
 ## Project Background
-![Screenshot 2022-11-23 at 11 06 43 AM](https://user-images.githubusercontent.com/108125998/203532038-2e3fa99e-cb30-4b18-813e-75edf56721dc.png)
 
 Your client has launched a pop-up café in a busy business district. 
 
@@ -27,7 +26,7 @@ As such, they require a software application which helps them to log and track o
 
 ## Project Outline
 
-![Screenshot 2022-11-23 at 10 46 49 AM](https://user-images.githubusercontent.com/108125998/203528003-df5f13d1-353d-4f17-a19b-758b73d86fff.png)
+![Screenshot 2022-11-23 at 11 06 43 AM](https://user-images.githubusercontent.com/108125998/203532038-2e3fa99e-cb30-4b18-813e-75edf56721dc.png)
 
 • The functions of the project are encapsulated in three classes. ProductMenu, CourierMenu and OrderMenu.  
 
