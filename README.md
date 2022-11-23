@@ -108,7 +108,8 @@ Apart from doing manuel testing to ensure the app meeting the requirements.
 Some unit testings are also done.   
 11 Tests were made at this point of time.  
 One is used to test the save list to csv function.  
-![Screenshot 2022-11-23 at 12 22 37 PM](https://user-images.githubusercontent.com/108125998/203546097-e997c457-38ab-4a4d-aced-4d3fc6d38623.png)
+
+![Screenshot 2022-11-23 at 12 24 36 PM](https://user-images.githubusercontent.com/108125998/203546372-dd8d9afd-03ee-4ed1-af64-03cd17509274.png)
 
 Two are used to test if the create product function will raise type error for unknown inputs and successfully append the item to the list.   
 
