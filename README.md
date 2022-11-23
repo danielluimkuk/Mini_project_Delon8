@@ -62,7 +62,10 @@ Another one is used to test the delete function and two other were used to test 
 Two similar tests for the courier menu.
 One last test for update status function of the order menu as it is a lengthy dictionary.  
 
-Tests were made with the assistance of fake classes as some of them do not return any objects to be tested.
+Tests were made with the assistance of fake classes as some of them do not return any objects to be tested.  
+
+![Screenshot 2022-11-23 at 12 25 25 AM](https://user-images.githubusercontent.com/108125998/203447393-b35f2753-42f1-4d73-a6e0-883ef320318f.png)
+
 
 ## Potential improvements  
 #### Better UI
