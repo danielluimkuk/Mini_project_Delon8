@@ -8,8 +8,9 @@ Your client has launched a pop-up café in a busy business district.
 
 They are offering home-made lunches and refreshments to the surrounding offices. 
 
-As such, they require a software application which helps them to log and track orders.
+As such, they require a software application which helps them to log and track orders.  
 
+![Screenshot 2022-11-23 at 12 27 35 AM](https://user-images.githubusercontent.com/108125998/203447563-9d16c417-b2d8-48f4-ba43-3b34f15b0b05.png)
 
 
 ## Requirements as a business:
