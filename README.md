@@ -1,8 +1,7 @@
-# Mini-Project for Data Engineer program of Generation UK  
-
-# Building a program that runs on the command line (CLI).  
+# Mini-Project for Data Engineer program of Generation UK  --- Building a program that runs on the command line (CLI).   
 
 ## Project Background
+![Screenshot 2022-11-23 at 11 06 43 AM](https://user-images.githubusercontent.com/108125998/203532038-2e3fa99e-cb30-4b18-813e-75edf56721dc.png)
 
 Your client has launched a pop-up café in a busy business district. 
 
